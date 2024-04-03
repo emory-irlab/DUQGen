@@ -20,6 +20,9 @@ T = 1.0
 VERBOSE = True
 
 
+special_datasets_list = ["signal1m", "hotpotqa", "quora"]
+
+
 cosine_fn = lambda A, B: dot(A, B) / (norm(A)*norm(B))
 
 
@@ -104,8 +107,21 @@ def main_run(dataset_name, collection_text_filepath, collection_embedding_filepa
         data = json.loads(line)
         docid = data['docid']
         doctext = data['doctext']
-        if len(doctext) < N_DOCTEXT_FILTER:
+
+        if dataset_name == 'signal1m' and len(doctext) < 3:
             continue
+        elif dataset_name == 'hotpotqa' and len(doctext) < 150:
+            continue
+        if dataset_name == 'quora' and len(doctext) < 3:
+            continue
+
+        elif dataset_name not in special_datasets_list and len(doctext) < N_DOCTEXT_FILTER:
+            continue
+
+
+
+        # if len(doctext) < N_DOCTEXT_FILTER:
+        #     continue
         filtered_docid_doctext_dict[docid] = doctext
 
     # 2. Load document embedding
