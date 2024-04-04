@@ -20,7 +20,7 @@ T = 1.0
 VERBOSE = True
 
 
-special_datasets_list = ["signal1m", "hotpotqa", "quora"]
+special_datasets_list = ["signal1m", "hotpotqa", "quora", "climate-fever"]
 
 
 cosine_fn = lambda A, B: dot(A, B) / (norm(A)*norm(B))
@@ -112,7 +112,9 @@ def main_run(dataset_name, collection_text_filepath, collection_embedding_filepa
             continue
         elif dataset_name == 'hotpotqa' and len(doctext) < 150:
             continue
-        if dataset_name == 'quora' and len(doctext) < 3:
+        elif dataset_name == 'quora' and len(doctext) < 15:
+            continue
+        elif dataset_name == 'climate-fever' and len(doctext) < 3:
             continue
 
         elif dataset_name not in special_datasets_list and len(doctext) < N_DOCTEXT_FILTER:
