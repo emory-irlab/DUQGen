@@ -151,7 +151,7 @@ To cite 🦆 **DUQGen** in your work,
 
 ```bibtex
 @inproceedings{duqgen2024,
-  title={DUQGen : Effective Unsupervised Domain Adaptation of Neural Rankers by Diversifying Synthetic Query Generation},
+  title={DUQGen: Effective Unsupervised Domain Adaptation of Neural Rankers by Diversifying Synthetic Query Generation},
   author={Chandradevan, Ramraj and Dhole, Kaustubh and Agichtein, Eugene},
   booktitle={2024 Annual Conference of the North American Chapter of the Association for Computational Linguistics},
   year={2024}
