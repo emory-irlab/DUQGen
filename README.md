@@ -2,10 +2,11 @@
 
 ![](https://img.shields.io/badge/PRs-welcome-brightgreen)
 <img src="https://img.shields.io/badge/Version-1.0-lightblue.svg" alt="Version">
-[![arXiv](https://img.shields.io/badge/arXiv-2311.11226-pink.svg)](...)
+[![arXiv](https://img.shields.io/badge/arXiv-2311.11226-pink.svg)](https://arxiv.org/abs/2404.02489)
 ![Python version](https://img.shields.io/badge/lang-python-important)
 ![License: Apache](https://img.shields.io/badge/License-Apache2.0-yellow.svg)
 
+This is the code for our paper -- [DUQGen: Effective Unsupervised Domain Adaptation of Neural Rankers by Diversifying Synthetic Query Generation (NAACL 2024)](https://arxiv.org/abs/2404.02489).
 
 # How is DUQGen different from Prior Works ?
 
@@ -154,6 +155,7 @@ To cite 🦆 **DUQGen** in your work,
   title={DUQGen: Effective Unsupervised Domain Adaptation of Neural Rankers by Diversifying Synthetic Query Generation},
   author={Chandradevan, Ramraj and Dhole, Kaustubh and Agichtein, Eugene},
   booktitle={2024 Annual Conference of the North American Chapter of the Association for Computational Linguistics},
+  url={https://arxiv.org/abs/2404.02489},
   year={2024}
 }
 ```
