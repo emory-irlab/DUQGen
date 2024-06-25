@@ -151,12 +151,21 @@ To be released soon ...
 To cite 🦆 **DUQGen** in your work,
 
 ```bibtex
-@inproceedings{duqgen2024,
-  title={DUQGen: Effective Unsupervised Domain Adaptation of Neural Rankers by Diversifying Synthetic Query Generation},
-  author={Chandradevan, Ramraj and Dhole, Kaustubh and Agichtein, Eugene},
-  booktitle={2024 Annual Conference of the North American Chapter of the Association for Computational Linguistics},
-  url={https://arxiv.org/abs/2404.02489},
-  year={2024}
+@inproceedings{chandradevan-etal-2024-duqgen,
+    title = "{DUQG}en: Effective Unsupervised Domain Adaptation of Neural Rankers by Diversifying Synthetic Query Generation",
+    author = "Chandradevan, Ramraj  and
+      Dhole, Kaustubh  and
+      Agichtein, Eugene",
+    editor = "Duh, Kevin  and
+      Gomez, Helena  and
+      Bethard, Steven",
+    booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    month = jun,
+    year = "2024",
+    address = "Mexico City, Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.naacl-long.413",
+    pages = "7430--7444",
 }
 ```
 
