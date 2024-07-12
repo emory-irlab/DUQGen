@@ -32,12 +32,18 @@ def find_optimum_k(sse_keys, sse_values, increment=0, decrement=0):
     return k
 
 
-def cluster_for_different_num_of_clusters(dataset_text_fn, dataset_emb_fn, save_sse_values):
+def cluster_for_different_num_of_clusters(dataset_name, dataset_text_fn, dataset_emb_fn, save_sse_values):
     filtered_docid_doctext_dict = {}
     for line in open(dataset_text_fn):
         d = json.loads(line)
         docid = d['docid']
         doctext = d['doctext']
+
+        if dataset_name == 'signal1m' and len(doctext) < 3:
+            continue
+        elif dataset_name == 'hotpotqa' and len(doctext) < 150:
+            continue
+
         if len(doctext) < 300:
             continue
         filtered_docid_doctext_dict[docid] = doctext
@@ -101,7 +107,9 @@ def cluster_for_different_num_of_clusters(dataset_text_fn, dataset_emb_fn, save_
 if __name__ == '__main__':
 
 
-    parser = argparse.ArgumentParser(description='Document Encoding')
+    parser = argparse.ArgumentParser(description='Document Encoding')    
+    parser.add_argument('--dataset_name', required=True, type=str,
+                        help='dataset name')
     parser.add_argument('--dataset_text_fn', required=True, type=str,
                         help='file contains document text for the dataset or corpus')
     parser.add_argument('--dataset_emb_fn', required=True, type=str,
@@ -111,7 +119,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
 
-    clusternum_SSE_dict = cluster_for_different_num_of_clusters(args.dataset_text_fn, args.dataset_emb_fn, args.save_sse_values)
+    clusternum_SSE_dict = cluster_for_different_num_of_clusters(args.dataset_name, args.dataset_text_fn, args.dataset_emb_fn, args.save_sse_values)
 
     sse_keys, sse_values = [], []
     for k, v in clusternum_SSE_dict.items():
