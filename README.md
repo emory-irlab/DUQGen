@@ -143,7 +143,7 @@ sbatch test_colbert.sh
 
 
 # Models
-To be released soon ...
+All the models are available on HuggingFace at this [link](https://huggingface.co/cramraj8).
 
 
 # Citation
